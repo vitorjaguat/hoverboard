@@ -1,6 +1,6 @@
 const container = document.getElementById('container');
 const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'];
-const SQUARES = 500;
+const SQUARES = 5000;
 
 for(let i = 0; i < SQUARES; i++) {
     const square = document.createElement('div');
@@ -15,6 +15,7 @@ for(let i = 0; i < SQUARES; i++) {
 
 function setColor(element) {
     const color = getRandomColor();
+    // const color = getColor();
     element.style.background = color;
     element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
 }
@@ -27,3 +28,6 @@ function removeColor(element) {
 function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)];
 }
+
+//Randomize color:
+// function getColor() {   const letters = '0123456789ABCDEF';   let color = '#';     for (let i = 0; i < 6; i++) {   color += letters[Math.floor(Math.random() * 16)];   }     return color; }
